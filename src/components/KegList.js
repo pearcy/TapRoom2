@@ -30,20 +30,24 @@ const masterKegList = [
 function KegList() {
   return (
     <React.Fragment>
-      <hr/>
-      <p className="text-gray-700 text-base">
-      Keg List
-      </p>
-      
-      {masterKegList.map((keg, index) => 
-        <Keg 
-        name={keg.name}
-        brand={keg.brand}
-        price={keg.price}
-        abv={keg.abv}
-        key={index}
-        />
-      )}
+     <div class="p-20">
+     <keglist>Keg List</keglist> 
+         <div class="border shadow rounded-lg p-10">
+            <div class="max-w-sm flex-column">
+            {masterKegList.map((keg, index) => 
+                <Keg 
+                name={keg.name}
+                brand={keg.brand}
+                price={keg.price}
+                abv={keg.abv}
+                key={index}
+                />
+            )}
+
+            </div>
+         </div>
+     </div>
+     
     </React.Fragment>
 
   );
