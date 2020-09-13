@@ -14,12 +14,12 @@ const StyledContainer = styled.main.attrs( {
         ${tw`bg-white shadow max-w-xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-4xl font-bold leading-tight text-gray-900`}
         }
 
-          form {
-        ${tw`bg-white text-center rounded py-8 px-5 shadow max-w-xs`}
-          }
+        /* form {
+        ${tw`flex content-center text-center bg-white text-center rounded py-8 px-5 shadow max-w-md`}
+          } */
 
-        input {
-          ${tw`border-gray-300 mb-4 w-full border-solid border rounded py-2 px-4`}
+        form {
+        ${tw`flex-auto content-center bg-white shadow max-w-xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-4xl font-bold leading-tight text-gray-900`}
           }
 
         button {
