@@ -1,8 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-function NewKegForm(prop) {
+
+function KegForm(props) {
     return (
-        <StyledForm>
+        <React.Fragment>
             <form>
                 <input type="text" placeholder="Brand" />
                 <input type="text" placeholder="Varietel" />
@@ -10,15 +12,16 @@ function NewKegForm(prop) {
                 <input type="text" placeholder="ABV" />
                 <button>Submit</button>
             </form>
-        </StyledForm>
+        </React.Fragment>
     );
 }
 
-NewKegForm.propTypes = {
+KegForm.propTypes = {
     brand: PropTypes.string.isRequired,
     varietal: PropTypes.string.isRequired,
     price: PropTypes.string,
     abv: PropTypes.string
 };
 
-export default NewKegForm;
+
+export default KegForm;

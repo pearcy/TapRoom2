@@ -1,4 +1,5 @@
 import React from "react";
+// import PropTypes from 'prop-types';
 import Keg from "./Keg";
 
 const masterKegList = [
@@ -27,7 +28,7 @@ const masterKegList = [
 ];
 
 
-function KegList() {
+function KegList(props) {
   return (
     <React.Fragment>
      <div class="p-10">
@@ -40,8 +41,7 @@ function KegList() {
                 brand={keg.brand}
                 price={keg.price}
                 abv={keg.abv}
-                key={index}
-                />
+                key={index} />
             )}
 
             </div>
@@ -51,6 +51,10 @@ function KegList() {
     </React.Fragment>
 
   );
+}
+
+KegList.propTypes = {
+  
 }
 
 export default KegList;
