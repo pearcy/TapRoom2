@@ -6,10 +6,13 @@ import { v4 } from 'uuid';
 function KegForm(props) {
     function handleNewTicketFormSubmission(event) {
         event.preventDefault();
-        console.log(event.target.brand.value);
-        console.log(event.target.varietal.value)
-        console.log(event.target.price.value);
-        console.log(event.target.abv.value);
+        props.onNewKegCreation({
+            name: event.target.name.value,
+            varietal: event.target.varietal.value,
+            price: event.target.price.value,
+            abv: event.target.abv.value,
+            id: v4()
+        });
     }
 
     return (
@@ -30,7 +33,8 @@ KegForm.propTypes = {
     brand: PropTypes.string.isRequired,
     varietal: PropTypes.string.isRequired,
     price: PropTypes.string,
-    abv: PropTypes.string
+    abv: PropTypes.string,
+    onNewKegCreation: PropTypes.func
 };
 
 
