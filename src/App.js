@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import KegList from "./components/KegList"
 import AddKeg from "./components/AdKeg";
 import StyledContainer from './styles';
+// import KegControl from "./KegControl";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <KegList />
       <AddKeg />
+      {/* <KegControl /> */}
     </StyledContainer>
     
   );
