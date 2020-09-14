@@ -7,7 +7,7 @@ function KegForm(props) {
     function handleNewTicketFormSubmission(event) {
         event.preventDefault();
         props.onNewKegCreation({
-            name: event.target.name.value,
+            brand: event.target.brand.value,
             varietal: event.target.varietal.value,
             price: event.target.price.value,
             abv: event.target.abv.value,
@@ -30,8 +30,8 @@ function KegForm(props) {
 
 
 KegForm.propTypes = {
-    brand: PropTypes.string.isRequired,
-    varietal: PropTypes.string.isRequired,
+    brand: PropTypes.string,
+    varietal: PropTypes.string,
     price: PropTypes.string,
     abv: PropTypes.string,
     onNewKegCreation: PropTypes.func
