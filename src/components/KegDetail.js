@@ -11,7 +11,7 @@ function KegDetail(props) {
             <h3>{keg.brand} - {keg.varietal}</h3>
             <h3>{keg.price}</h3>
             <h3>{keg.abv}</h3>
-            <button onClick={() => onClickingDelete(ticket.id) }>Delete Keg</button>
+            <button onClick={() => onClickingDelete(keg.id) }>Delete Keg</button>
             <hr/>
         </React.Fragment>
     );
