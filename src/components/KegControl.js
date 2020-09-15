@@ -40,13 +40,22 @@ class KegControl extends React.Component {
         });
       }
 
+      handleDeletingKeg = (id) => {
+          const newMasterKegList = this.state.masterKegList.filter(ticket => ticket.id !== id);
+          this.setState({
+              masterKegList: newMasterKegList,
+              selectedKeg: null
+          });
+      }
+
 
     render() {
         let currentlyVisibleState = null;
         let buttonText = null;
 
         if (this.state.selectedKeg !=null) {
-            currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+            currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg}
+            onClickingDelete = {this.handleDeletingKeg} />
             buttonText = "Return to List";
         }
 
