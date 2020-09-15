@@ -7,12 +7,19 @@ function KegDetail(props) {
 
     return (
         <React.Fragment>
-            <h1>Keg Detail</h1>
-            <h3>{keg.brand} - {keg.varietal}</h3>
-            <h3>{keg.price}</h3>
-            <h3>{keg.abv}</h3>
-            <button onClick={() => onClickingDelete(keg.id) }>Delete Keg</button>
-            <hr/>
+            <div class="p-10">
+            <header>Keg Detail</header> 
+                <div class="border shadow rounded-lg p-10">
+                    <div class="max-w-xl flex-column">
+                        {keg.brand}
+                        {keg.varietal}
+                        {keg.price}
+                        {keg.abv}
+                    </div>
+                </div>
+                <button onClick={() => onClickingDelete(keg.id) }>Delete Keg</button>
+                <hr/>
+            </div>
         </React.Fragment>
     );
 }
@@ -23,4 +30,6 @@ KegDetail.propTypes = {
 };
 
 export default KegDetail;
+
+
 
