@@ -9,11 +9,18 @@ class KegControl extends React.Component {
         this.state = {
             formVisibleOnPage: false,
             masterKegList: [],
-            selectedKeg: null
+            selectedKeg: null,
+            count: 124
         };
     }
 
-    handleClick = () => {
+    pourDecrement() {
+        this.setState({
+            count: this.state.count - 1
+        });
+    }
+
+      handleClick = () => {
         if (this.state.selectedKeg != null) {
             this.setState({
                 formVisibleOnPage: false,
@@ -48,34 +55,36 @@ class KegControl extends React.Component {
           });
       }
 
+    
 
-    render() {
-        let currentlyVisibleState = null;
-        let buttonText = null;
+        render() {
+            let currentlyVisibleState = null;
+            let buttonText = null;
 
-        if (this.state.selectedKeg !=null) {
-            currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg}
-            onClickingDelete = {this.handleDeletingKeg} />
-            buttonText = "Return to List";
+            if (this.state.selectedKeg !=null) {
+                currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg}
+                onClickingDelete = {this.handleDeletingKeg} />
+                buttonText = "Return to List";
+            }
+
+            else if (this.state.formVisibleOnPage) {
+                currentlyVisibleState = <KegForm onNewKegCreation={this.handleAddingNewKegToList} />;
+                buttonText = "Return to List"; 
+                } else {
+                currentlyVisibleState = <KegList kegList={this.state.masterKegList} 
+                onKegSelection={this.handleChangingSelectedKeg} />;
+                buttonText = "Add Keg" 
+                }
+                
+            return (
+                <React.Fragment>
+                    {currentlyVisibleState}
+                    <button onClick={this.handleClick}>{buttonText}</button>
+                </React.Fragment>
+            );
         }
 
-        else if (this.state.formVisibleOnPage) {
-            currentlyVisibleState = <KegForm onNewKegCreation={this.handleAddingNewKegToList} />;
-            buttonText = "Return to List"; 
-            } else {
-            currentlyVisibleState = <KegList kegList={this.state.masterKegList} 
-            onKegSelection={this.handleChangingSelectedKeg} />;
-            buttonText = "Add Keg" 
-            }
-            
-        return (
-            <React.Fragment>
-                {currentlyVisibleState}
-                <button onClick={this.handleClick}>{buttonText}</button>
-            </React.Fragment>
-        );
-    }
+};
 
-}
 
 export default KegControl;

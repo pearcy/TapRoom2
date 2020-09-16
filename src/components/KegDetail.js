@@ -8,20 +8,20 @@ function KegDetail(props) {
             return (
                 <React.Fragment>
             <header>Keg Details</header> 
-            <div class="flex">
-                <div class="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+            <div className="flex">
+                <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
                     <h4>{keg.brand}</h4>
                 </div>
-                <div class="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+                <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
                     <h4>{keg.varietal}</h4>
                 </div>
-                <div class="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+                <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
                     <h4>{keg.price}</h4>
                 </div>
-                <div class="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+                <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
                     <h4>{keg.abv}</h4>
                 </div>
-                <div class="flex text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">  
+                <div className="flex text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">  
                 <div>
                 <button onClick={() => onClickingDelete(keg.id) }>Delete Keg</button>
                 </div>
@@ -31,7 +31,6 @@ function KegDetail(props) {
             );
             
 }
-
 
 
 KegDetail.propTypes = {

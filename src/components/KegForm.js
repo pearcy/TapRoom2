@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
 function KegForm(props) {
-    function handleNewTicketFormSubmission(event) {
+    
+    function handleNewKegFormSubmission(event) {
         event.preventDefault();
         props.onNewKegCreation({
             brand: event.target.brand.value,
@@ -16,7 +17,7 @@ function KegForm(props) {
 
     return (
         <React.Fragment>
-            <form onSubmit={handleNewTicketFormSubmission}>
+            <form onSubmit={handleNewKegFormSubmission}>
                 <input type="text" name="brand" placeholder="Brand" />
                 <input type="text" name="varietal" placeholder="Varietal" />
                 <input type="text" name="price" placeholder="Price" />

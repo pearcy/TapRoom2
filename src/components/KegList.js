@@ -7,10 +7,10 @@ function KegList(props) {
 
   return (
     <React.Fragment>
-     <div class="p-10">
+     <div className="p-10">
      <header>Keg List</header> 
          <div className="border shadow rounded-lg p-10">
-            <div class="max-w-xl flex-column">
+            <div className="max-w-xl flex-column">
             {props.kegList.map((keg) => 
                 <Keg 
                 whenKegClicked = { props.onKegSelection }
