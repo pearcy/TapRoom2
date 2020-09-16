@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
-
 function KegForm(props) {
     function handleNewTicketFormSubmission(event) {
         event.preventDefault();
@@ -30,7 +29,7 @@ function KegForm(props) {
 
 
 KegForm.propTypes = {
-    brand: PropTypes.string,
+    brand: PropTypes.string.isRequired,
     varietal: PropTypes.string,
     price: PropTypes.string,
     abv: PropTypes.string,
