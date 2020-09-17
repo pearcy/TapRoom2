@@ -11,6 +11,7 @@ function KegForm(props) {
             varietal: event.target.varietal.value,
             price: event.target.price.value,
             abv: event.target.abv.value,
+            pintCount: 124,
             id: v4()
         });
     }

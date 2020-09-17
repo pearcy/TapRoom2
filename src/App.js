@@ -9,8 +9,6 @@ function App() {
     
     <StyledContainer>
       <Header />
-      {/* <KegList /> */}
-      {/* <AddKeg /> */}
       <KegControl />
     </StyledContainer>
     

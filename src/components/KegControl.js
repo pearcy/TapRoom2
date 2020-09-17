@@ -10,14 +10,11 @@ class KegControl extends React.Component {
             formVisibleOnPage: false,
             masterKegList: [],
             selectedKeg: null,
-            count: 124
         };
     }
 
-    pourDecrement() {
-        this.setState({
-            count: this.state.count - 1
-        });
+    handlePourPint() {
+        this.setState({kegCount: this.state.kegCount - 1});
     }
 
       handleClick = () => {

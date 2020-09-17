@@ -1,12 +1,12 @@
-Tap Room
+# _Tap Room_
 
  ### By Joseph Pearce
 
 ## Description
 
-Website for tracking kegs from a tap.
+Tap Room is a web app to track keg inventory and decrement the amount by one pint for each pour.
 
-
+## Wireframe
 <img src="src/images/TapRoom-Component3.png" />
 
 
@@ -18,33 +18,30 @@ Website for tracking kegs from a tap.
 * As a user, I want to see how many pints are left in a keg. A full keg has roughly 124 pints.
 * As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
 
-## Available Scripts
+## To Run
 
-In the project directory, you can run:
+* Open project in code editor of choice
+* Run "npm install" to install all necessary dependencies
+* Run "npm start" to open project in browser
 
-### `npm start`
+## Support and contact details
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_Please contact me through my Github_ 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+* _HTML_
+* _CSS_
+* _JavaScript_
+* _Webpack_
+* _React_
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### License
 
-### `npm run build`
+MIT License.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Copyright (c) 2020 
 
 
 
-## Learn More
+
