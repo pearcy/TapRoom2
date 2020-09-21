@@ -4,11 +4,12 @@ import Keg from "./Keg";
 
 
 function KegList(props) {
+  
 
   return (
     <React.Fragment>
      <div className="p-10">
-     <header>Keg List</header> 
+      <header>Keg List</header> 
          <div className="border shadow rounded-lg p-10">
             <div className="max-w-xl flex-column">
             {props.kegList.map((keg) => 
@@ -18,7 +19,7 @@ function KegList(props) {
                 varietal={keg.varietal}
                 price={keg.price}
                 abv={keg.abv}
-                count={keg.pintCount}
+                // pintCount={keg.pintCount}
                 id={keg.id}
                 key={keg.id} />
             )}

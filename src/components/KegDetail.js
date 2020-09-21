@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import Keg from './Keg';
+import PintPour from "./PintPour";
+// import Keg from './Keg';
 
 function KegDetail(props) {
-    const { keg, onClickingDelete } = props;
+    const { keg, onPintPour } = props;
 
             return (
             <React.Fragment>
@@ -21,12 +22,16 @@ function KegDetail(props) {
                 <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
                     <h4>{keg.abv}</h4>
                 </div>
-                <div className="flex text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">  
-                <div>
-                <button onClick={() => onClickingDelete(keg.id) }>Delete Keg</button>
+                <div className="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+                    <h4>{keg.pintCount}</h4>
                 </div>
-              </div>
-            </div> 
+                <div className="flex text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">  
+                <button onClick={() => props.onPintPour(keg.id)}>Pour</button>
+                </div>
+                <PintPour
+                    handlePintPour = { props.handlePintPour } pintCount = { keg.pintCount }
+                    />
+            </div>
             </React.Fragment>
             );
             
@@ -35,7 +40,7 @@ function KegDetail(props) {
 
 KegDetail.propTypes = {
     keg: PropTypes.object,
-    onClickingDelete: PropTypes.func
+    handlePintPour: PropTypes.func
 };
 
 export default KegDetail;
