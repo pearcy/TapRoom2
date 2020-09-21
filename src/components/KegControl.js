@@ -36,7 +36,7 @@ class KegControl extends React.Component {
       }
 
       handleChangingSelectedKeg = (id) => {
-          const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id) [0];
+          const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
           this.setState({selectedKeg: selectedKeg
         });
       }
@@ -51,11 +51,12 @@ class KegControl extends React.Component {
 
       handlePintPour = (id) => {
         const selectedKeg = this.state.masterKegList.filter(keg => keg.id !== id)[0];
-           this.state.selectedKeg.pintCount = this.state.selectedKeg.pintCount -1;
-           this.setState({ selectedKeg: this.state.selectedKeg});
-       }
+        if(this.state.selectedKeg.pintCount > 0) {
+            this.state.selectedKeg.pintCount = this.state.selectedKeg.pintCount -1;
+            this.setState({ selectedKeg: this.state.selectedKeg});
+        }
+      }
    
-
 
         render() {
             let currentlyVisibleState = null;
